@@ -2,23 +2,19 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCounterClickedAsync(object sender, EventArgs e)
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetStringAsync("http://localhost:9696/api/location");
+                CounterBtn.Text = $"{response}";
+                SemanticScreenReader.Announce(CounterBtn.Text);
+            }
         }
     }
 }

@@ -16,23 +16,17 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
+                Text="Select the button to get the location from the API"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="This is a simple .NET Multi-platform App UI application that combines both client-side and server-side functionality."
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Defines App in text"
+                SemanticProperties.Description="Defines App's function"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
             <Button
                 x:Name="CounterBtn"
                 Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                SemanticProperties.Hint="Gets location from API on button click"
+                Clicked="OnCounterClickedAsync"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
