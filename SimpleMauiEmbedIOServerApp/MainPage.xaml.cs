@@ -1,4 +1,9 @@
-﻿namespace SimpleMauiEmbedIOServerApp
+﻿using Newtonsoft.Json;
+using System;
+using System.Net.Http;
+using System.Text.Json;
+
+namespace SimpleMauiEmbedIOServerApp
 {
     public partial class MainPage : ContentPage
     {
@@ -12,8 +17,11 @@
             using (var client = new HttpClient())
             {
                 var response = await client.GetStringAsync("http://localhost:9696/api/location");
-                CounterBtn.Text = $"{response}";
-                SemanticScreenReader.Announce(CounterBtn.Text);
+                var location = JsonConvert.DeserializeObject<Location>(response);
+
+                LocationInfoLabel.Text = $"Latitude: {location.Latitude}, Longitude: {location.Longitude}";
+
+                SemanticScreenReader.Announce(LocationInfoLabel.Text);
             }
         }
     }

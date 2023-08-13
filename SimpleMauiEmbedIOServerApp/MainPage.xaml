@@ -29,6 +29,14 @@
                 Clicked="OnCounterClickedAsync"
                 HorizontalOptions="Center" />
 
+            <Label
+                x:Name="LocationInfoLabel"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="19"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0" />
+
+
         </VerticalStackLayout>
     </ScrollView>
 
