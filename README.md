@@ -34,7 +34,7 @@ This app is a simple example of a .NET MAUI application that combines both clien
 ## **EmbedIO Web Server**
 * The application uses the EmbedIO library to create a lightweight web server. The server serves a simple API endpoint at /location that returns mock location data.
 
-![ImageOneAndroid](https://github.com/SamualUllrich/SimpleMauiEmbedIOServerApp/assets/131905000/aa920dbb-b2f7-4fe0-87c4-84f4faaf8cb5)
+![ImageOneAndroid](https://github.com/SamualUllrich/SimpleMauiEmbedIOServerApp/assets/131905000/a8c0e04b-aaf2-4a05-8bb9-5f5e80d4c85a)
 
- ![ImageTwoAndroid](https://github.com/SamualUllrich/SimpleMauiEmbedIOServerApp/assets/131905000/0fcb5fec-0572-4412-b9eb-fd853f9ad9d0)
+![ImageTwoAndroid](https://github.com/SamualUllrich/SimpleMauiEmbedIOServerApp/assets/131905000/bf0c9461-dd7d-43fc-9299-2a0ac4c95d2c)
 
