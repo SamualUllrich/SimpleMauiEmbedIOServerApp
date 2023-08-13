@@ -17,6 +17,7 @@ namespace SimpleMauiEmbedIOServerApp
             using (var client = new HttpClient())
             {
                 var response = await client.GetStringAsync("http://localhost:9696/api/location");
+                CounterBtn.Text = "Clicked";
                 var location = JsonConvert.DeserializeObject<Location>(response);
 
                 LocationInfoLabel.Text = $"Latitude: {location.Latitude}, Longitude: {location.Longitude}";
